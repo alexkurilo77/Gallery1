@@ -53,25 +53,23 @@ function save_image($image){
     // echo '<br>';
     return $tmp_name;
 }
-if (isset($_FILES['image'])&&$_FILES['image']['error']=='') 
-    save_image($_FILES['image']);
 
-// save_image($image);
+// $save_image= save_image($image);
 function insert_path_image($tmp_name){
     $new_tmp = str_replace ('\\', '/', str_replace(getcwd(), '', $tmp_name));
     return $new_tmp;
 }
-echo insert_path_image($tmp_name);
+// echo insert_path_image($tmp_name);
 // echo '<br>';
 
- function insert_image($conn){
+function insert_image($conn){
     mysqli_query($conn,
-        "INSERT INTO images ( titlle, path, description, category_id)
-         VALUES ( TRUE, TRUE, TRUE, TRUE)            
+        "INSERT INTO images ( title, path, description, category_id)
+         VALUES ( 'aa', 'bb', 'cc', 1)            
         ");
 }
-// echo insert_image($conn);
-// echo '<br>';
+var_dump( insert_image($conn));
+echo '<br>';
 
 
  ?>
