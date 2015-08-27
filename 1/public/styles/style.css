@@ -1,0 +1,20 @@
+body{
+	margin: 0;
+}
+.content{
+	box-shadow: 0 0 10px black;
+	width: 970px;
+	background-color: #eee;
+	margin: auto;
+}
+.head, .main, .foot{ width: 100%; min-height: 100px;}
+.head{
+	background-color: red;
+}
+.main{
+	padding: 2em 0;
+	background-color: green;
+}
+.foot{
+	background-color: blue;
+}
